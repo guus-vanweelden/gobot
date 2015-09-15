@@ -704,8 +704,6 @@ func (m *Heartbeat) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.MAVLINK_VERSION)
 }
 
-const ()
-
 //
 // MESSAGE SYS_STATUS
 //
@@ -803,8 +801,6 @@ func (m *SysStatus) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.BATTERY_REMAINING)
 }
 
-const ()
-
 //
 // MESSAGE SYSTEM_TIME
 //
@@ -857,8 +853,6 @@ func (m *SystemTime) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TIME_UNIX_USEC)
 	binary.Read(data, binary.LittleEndian, &m.TIME_BOOT_MS)
 }
-
-const ()
 
 //
 // MESSAGE PING
@@ -920,8 +914,6 @@ func (m *Ping) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
-
-const ()
 
 //
 // MESSAGE CHANGE_OPERATOR_CONTROL
@@ -1045,8 +1037,6 @@ func (m *ChangeOperatorControlAck) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.ACK)
 }
 
-const ()
-
 //
 // MESSAGE AUTH_KEY
 //
@@ -1156,8 +1146,6 @@ func (m *SetMode) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 	binary.Read(data, binary.LittleEndian, &m.BASE_MODE)
 }
-
-const ()
 
 //
 // MESSAGE PARAM_REQUEST_READ
@@ -1276,8 +1264,6 @@ func (m *ParamRequestList) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
-
-const ()
 
 //
 // MESSAGE PARAM_VALUE
@@ -1502,8 +1488,6 @@ func (m *GpsRawInt) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.SATELLITES_VISIBLE)
 }
 
-const ()
-
 //
 // MESSAGE GPS_STATUS
 //
@@ -1666,8 +1650,6 @@ func (m *ScaledImu) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.ZMAG)
 }
 
-const ()
-
 //
 // MESSAGE RAW_IMU
 //
@@ -1753,8 +1735,6 @@ func (m *RawImu) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.ZMAG)
 }
 
-const ()
-
 //
 // MESSAGE RAW_PRESSURE
 //
@@ -1820,8 +1800,6 @@ func (m *RawPressure) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TEMPERATURE)
 }
 
-const ()
-
 //
 // MESSAGE SCALED_PRESSURE
 //
@@ -1882,8 +1860,6 @@ func (m *ScaledPressure) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.PRESS_DIFF)
 	binary.Read(data, binary.LittleEndian, &m.TEMPERATURE)
 }
-
-const ()
 
 //
 // MESSAGE ATTITUDE
@@ -1957,8 +1933,6 @@ func (m *Attitude) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.PITCHSPEED)
 	binary.Read(data, binary.LittleEndian, &m.YAWSPEED)
 }
-
-const ()
 
 //
 // MESSAGE ATTITUDE_QUATERNION
@@ -2037,8 +2011,6 @@ func (m *AttitudeQuaternion) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.YAWSPEED)
 }
 
-const ()
-
 //
 // MESSAGE LOCAL_POSITION_NED
 //
@@ -2111,8 +2083,6 @@ func (m *LocalPositionNed) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.VY)
 	binary.Read(data, binary.LittleEndian, &m.VZ)
 }
-
-const ()
 
 //
 // MESSAGE GLOBAL_POSITION_INT
@@ -2194,8 +2164,6 @@ func (m *GlobalPositionInt) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.VZ)
 	binary.Read(data, binary.LittleEndian, &m.HDG)
 }
-
-const ()
 
 //
 // MESSAGE RC_CHANNELS_SCALED
@@ -2286,8 +2254,6 @@ func (m *RcChannelsScaled) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.RSSI)
 }
 
-const ()
-
 //
 // MESSAGE RC_CHANNELS_RAW
 //
@@ -2377,8 +2343,6 @@ func (m *RcChannelsRaw) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.RSSI)
 }
 
-const ()
-
 //
 // MESSAGE SERVO_OUTPUT_RAW
 //
@@ -2464,8 +2428,6 @@ func (m *ServoOutputRaw) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.PORT)
 }
 
-const ()
-
 //
 // MESSAGE MISSION_REQUEST_PARTIAL_LIST
 //
@@ -2527,8 +2489,6 @@ func (m *MissionRequestPartialList) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
 
-const ()
-
 //
 // MESSAGE MISSION_WRITE_PARTIAL_LIST
 //
@@ -2589,8 +2549,6 @@ func (m *MissionWritePartialList) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
-
-const ()
 
 //
 // MESSAGE MISSION_ITEM
@@ -2693,8 +2651,6 @@ func (m *MissionItem) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.AUTOCONTINUE)
 }
 
-const ()
-
 //
 // MESSAGE MISSION_REQUEST
 //
@@ -2751,8 +2707,6 @@ func (m *MissionRequest) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
-
-const ()
 
 //
 // MESSAGE MISSION_SET_CURRENT
@@ -2811,8 +2765,6 @@ func (m *MissionSetCurrent) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
 
-const ()
-
 //
 // MESSAGE MISSION_CURRENT
 //
@@ -2861,8 +2813,6 @@ func (m *MissionCurrent) Decode(buf []byte) {
 	data := bytes.NewBuffer(buf)
 	binary.Read(data, binary.LittleEndian, &m.SEQ)
 }
-
-const ()
 
 //
 // MESSAGE MISSION_REQUEST_LIST
@@ -2916,8 +2866,6 @@ func (m *MissionRequestList) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
-
-const ()
 
 //
 // MESSAGE MISSION_COUNT
@@ -2976,8 +2924,6 @@ func (m *MissionCount) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
 
-const ()
-
 //
 // MESSAGE MISSION_CLEAR_ALL
 //
@@ -3031,8 +2977,6 @@ func (m *MissionClearAll) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
 
-const ()
-
 //
 // MESSAGE MISSION_ITEM_REACHED
 //
@@ -3081,8 +3025,6 @@ func (m *MissionItemReached) Decode(buf []byte) {
 	data := bytes.NewBuffer(buf)
 	binary.Read(data, binary.LittleEndian, &m.SEQ)
 }
-
-const ()
 
 //
 // MESSAGE MISSION_ACK
@@ -3140,8 +3082,6 @@ func (m *MissionAck) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 	binary.Read(data, binary.LittleEndian, &m.TYPE)
 }
-
-const ()
 
 //
 // MESSAGE SET_GPS_GLOBAL_ORIGIN
@@ -3204,8 +3144,6 @@ func (m *SetGpsGlobalOrigin) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 }
 
-const ()
-
 //
 // MESSAGE GPS_GLOBAL_ORIGIN
 //
@@ -3262,8 +3200,6 @@ func (m *GpsGlobalOrigin) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.LONGITUDE)
 	binary.Read(data, binary.LittleEndian, &m.ALTITUDE)
 }
-
-const ()
 
 //
 // MESSAGE SET_LOCAL_POSITION_SETPOINT
@@ -3338,8 +3274,6 @@ func (m *SetLocalPositionSetpoint) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.COORDINATE_FRAME)
 }
 
-const ()
-
 //
 // MESSAGE LOCAL_POSITION_SETPOINT
 //
@@ -3404,8 +3338,6 @@ func (m *LocalPositionSetpoint) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.YAW)
 	binary.Read(data, binary.LittleEndian, &m.COORDINATE_FRAME)
 }
-
-const ()
 
 //
 // MESSAGE GLOBAL_POSITION_SETPOINT_INT
@@ -3472,8 +3404,6 @@ func (m *GlobalPositionSetpointInt) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.COORDINATE_FRAME)
 }
 
-const ()
-
 //
 // MESSAGE SET_GLOBAL_POSITION_SETPOINT_INT
 //
@@ -3538,8 +3468,6 @@ func (m *SetGlobalPositionSetpointInt) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.YAW)
 	binary.Read(data, binary.LittleEndian, &m.COORDINATE_FRAME)
 }
-
-const ()
 
 //
 // MESSAGE SAFETY_SET_ALLOWED_AREA
@@ -3622,8 +3550,6 @@ func (m *SafetySetAllowedArea) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.FRAME)
 }
 
-const ()
-
 //
 // MESSAGE SAFETY_ALLOWED_AREA
 //
@@ -3697,8 +3623,6 @@ func (m *SafetyAllowedArea) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.FRAME)
 }
 
-const ()
-
 //
 // MESSAGE SET_ROLL_PITCH_YAW_THRUST
 //
@@ -3767,8 +3691,6 @@ func (m *SetRollPitchYawThrust) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
-
-const ()
 
 //
 // MESSAGE SET_ROLL_PITCH_YAW_SPEED_THRUST
@@ -3839,8 +3761,6 @@ func (m *SetRollPitchYawSpeedThrust) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
 
-const ()
-
 //
 // MESSAGE ROLL_PITCH_YAW_THRUST_SETPOINT
 //
@@ -3905,8 +3825,6 @@ func (m *RollPitchYawThrustSetpoint) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.YAW)
 	binary.Read(data, binary.LittleEndian, &m.THRUST)
 }
-
-const ()
 
 //
 // MESSAGE ROLL_PITCH_YAW_SPEED_THRUST_SETPOINT
@@ -3973,8 +3891,6 @@ func (m *RollPitchYawSpeedThrustSetpoint) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.THRUST)
 }
 
-const ()
-
 //
 // MESSAGE SET_QUAD_MOTORS_SETPOINT
 //
@@ -4039,8 +3955,6 @@ func (m *SetQuadMotorsSetpoint) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.MOTOR_LEFT_SW)
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 }
-
-const ()
 
 //
 // MESSAGE SET_QUAD_SWARM_ROLL_PITCH_YAW_THRUST
@@ -4194,8 +4108,6 @@ func (m *NavControllerOutput) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_BEARING)
 	binary.Read(data, binary.LittleEndian, &m.WP_DIST)
 }
-
-const ()
 
 //
 // MESSAGE SET_QUAD_SWARM_LED_ROLL_PITCH_YAW_THRUST
@@ -4369,8 +4281,6 @@ func (m *StateCorrection) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.VZERR)
 }
 
-const ()
-
 //
 // MESSAGE RC_CHANNELS
 //
@@ -4500,8 +4410,6 @@ func (m *RcChannels) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.RSSI)
 }
 
-const ()
-
 //
 // MESSAGE REQUEST_DATA_STREAM
 //
@@ -4567,8 +4475,6 @@ func (m *RequestDataStream) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.START_STOP)
 }
 
-const ()
-
 //
 // MESSAGE DATA_STREAM
 //
@@ -4625,8 +4531,6 @@ func (m *DataStream) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.STREAM_ID)
 	binary.Read(data, binary.LittleEndian, &m.ON_OFF)
 }
-
-const ()
 
 //
 // MESSAGE MANUAL_CONTROL
@@ -4696,8 +4600,6 @@ func (m *ManualControl) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.BUTTONS)
 	binary.Read(data, binary.LittleEndian, &m.TARGET)
 }
-
-const ()
 
 //
 // MESSAGE RC_CHANNELS_OVERRIDE
@@ -4784,8 +4686,6 @@ func (m *RcChannelsOverride) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
 
-const ()
-
 //
 // MESSAGE VFR_HUD
 //
@@ -4854,8 +4754,6 @@ func (m *VfrHud) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.HEADING)
 	binary.Read(data, binary.LittleEndian, &m.THROTTLE)
 }
-
-const ()
 
 //
 // MESSAGE COMMAND_LONG
@@ -4946,8 +4844,6 @@ func (m *CommandLong) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.CONFIRMATION)
 }
 
-const ()
-
 //
 // MESSAGE COMMAND_ACK
 //
@@ -5000,8 +4896,6 @@ func (m *CommandAck) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.COMMAND)
 	binary.Read(data, binary.LittleEndian, &m.RESULT)
 }
-
-const ()
 
 //
 // MESSAGE ROLL_PITCH_YAW_RATES_THRUST_SETPOINT
@@ -5067,8 +4961,6 @@ func (m *RollPitchYawRatesThrustSetpoint) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.YAW_RATE)
 	binary.Read(data, binary.LittleEndian, &m.THRUST)
 }
-
-const ()
 
 //
 // MESSAGE MANUAL_SETPOINT
@@ -5142,8 +5034,6 @@ func (m *ManualSetpoint) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.MODE_SWITCH)
 	binary.Read(data, binary.LittleEndian, &m.MANUAL_OVERRIDE_SWITCH)
 }
-
-const ()
 
 //
 // MESSAGE ATTITUDE_SETPOINT_EXTERNAL
@@ -5331,8 +5221,6 @@ func (m *LocalNedPositionSetpointExternal) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.COORDINATE_FRAME)
 }
 
-const ()
-
 //
 // MESSAGE GLOBAL_POSITION_SETPOINT_EXTERNAL_INT
 //
@@ -5430,8 +5318,6 @@ func (m *GlobalPositionSetpointExternalInt) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
 
-const ()
-
 //
 // MESSAGE LOCAL_POSITION_NED_SYSTEM_GLOBAL_OFFSET
 //
@@ -5504,8 +5390,6 @@ func (m *LocalPositionNedSystemGlobalOffset) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.PITCH)
 	binary.Read(data, binary.LittleEndian, &m.YAW)
 }
-
-const ()
 
 //
 // MESSAGE HIL_STATE
@@ -5616,8 +5500,6 @@ func (m *HilState) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.ZACC)
 }
 
-const ()
-
 //
 // MESSAGE HIL_CONTROLS
 //
@@ -5706,8 +5588,6 @@ func (m *HilControls) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.MODE)
 	binary.Read(data, binary.LittleEndian, &m.NAV_MODE)
 }
-
-const ()
 
 //
 // MESSAGE HIL_RC_INPUTS_RAW
@@ -5810,8 +5690,6 @@ func (m *HilRcInputsRaw) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.RSSI)
 }
 
-const ()
-
 //
 // MESSAGE OPTICAL_FLOW
 //
@@ -5889,8 +5767,6 @@ func (m *OpticalFlow) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.QUALITY)
 }
 
-const ()
-
 //
 // MESSAGE GLOBAL_VISION_POSITION_ESTIMATE
 //
@@ -5963,8 +5839,6 @@ func (m *GlobalVisionPositionEstimate) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.PITCH)
 	binary.Read(data, binary.LittleEndian, &m.YAW)
 }
-
-const ()
 
 //
 // MESSAGE VISION_POSITION_ESTIMATE
@@ -6039,8 +5913,6 @@ func (m *VisionPositionEstimate) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.YAW)
 }
 
-const ()
-
 //
 // MESSAGE VISION_SPEED_ESTIMATE
 //
@@ -6101,8 +5973,6 @@ func (m *VisionSpeedEstimate) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.Y)
 	binary.Read(data, binary.LittleEndian, &m.Z)
 }
-
-const ()
 
 //
 // MESSAGE VICON_POSITION_ESTIMATE
@@ -6176,8 +6046,6 @@ func (m *ViconPositionEstimate) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.PITCH)
 	binary.Read(data, binary.LittleEndian, &m.YAW)
 }
-
-const ()
 
 //
 // MESSAGE HIGHRES_IMU
@@ -6283,8 +6151,6 @@ func (m *HighresImu) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TEMPERATURE)
 	binary.Read(data, binary.LittleEndian, &m.FIELDS_UPDATED)
 }
-
-const ()
 
 //
 // MESSAGE OMNIDIRECTIONAL_FLOW
@@ -6465,8 +6331,6 @@ func (m *HilSensor) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.FIELDS_UPDATED)
 }
 
-const ()
-
 //
 // MESSAGE SIM_STATE
 //
@@ -6596,8 +6460,6 @@ func (m *SimState) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.VD)
 }
 
-const ()
-
 //
 // MESSAGE RADIO_STATUS
 //
@@ -6670,8 +6532,6 @@ func (m *RadioStatus) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.NOISE)
 	binary.Read(data, binary.LittleEndian, &m.REMNOISE)
 }
-
-const ()
 
 //
 // MESSAGE FILE_TRANSFER_START
@@ -6856,8 +6716,6 @@ func (m *FileTransferRes) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.RESULT)
 }
 
-const ()
-
 //
 // MESSAGE HIL_GPS
 //
@@ -6955,8 +6813,6 @@ func (m *HilGps) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.SATELLITES_VISIBLE)
 }
 
-const ()
-
 //
 // MESSAGE HIL_OPTICAL_FLOW
 //
@@ -7033,8 +6889,6 @@ func (m *HilOpticalFlow) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.SENSOR_ID)
 	binary.Read(data, binary.LittleEndian, &m.QUALITY)
 }
-
-const ()
 
 //
 // MESSAGE HIL_STATE_QUATERNION
@@ -7234,8 +7088,6 @@ func (m *ScaledImu2) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.ZMAG)
 }
 
-const ()
-
 //
 // MESSAGE LOG_REQUEST_LIST
 //
@@ -7296,8 +7148,6 @@ func (m *LogRequestList) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
-
-const ()
 
 //
 // MESSAGE LOG_ENTRY
@@ -7364,8 +7214,6 @@ func (m *LogEntry) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.LAST_LOG_NUM)
 }
 
-const ()
-
 //
 // MESSAGE LOG_REQUEST_DATA
 //
@@ -7430,8 +7278,6 @@ func (m *LogRequestData) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
-
-const ()
 
 //
 // MESSAGE LOG_DATA
@@ -7551,8 +7397,6 @@ func (m *LogErase) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
 
-const ()
-
 //
 // MESSAGE LOG_REQUEST_END
 //
@@ -7605,8 +7449,6 @@ func (m *LogRequestEnd) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 	binary.Read(data, binary.LittleEndian, &m.TARGET_COMPONENT)
 }
-
-const ()
 
 //
 // MESSAGE GPS_INJECT_DATA
@@ -7766,8 +7608,6 @@ func (m *Gps2Raw) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.DGPS_NUMCH)
 }
 
-const ()
-
 //
 // MESSAGE POWER_STATUS
 //
@@ -7824,8 +7664,6 @@ func (m *PowerStatus) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.VSERVO)
 	binary.Read(data, binary.LittleEndian, &m.FLAGS)
 }
-
-const ()
 
 //
 // MESSAGE SERIAL_CONTROL
@@ -7997,8 +7835,6 @@ func (m *GpsRtk) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.BASELINE_COORDS_TYPE)
 }
 
-const ()
-
 //
 // MESSAGE GPS2_RTK
 //
@@ -8096,8 +7932,6 @@ func (m *Gps2Rtk) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.BASELINE_COORDS_TYPE)
 }
 
-const ()
-
 //
 // MESSAGE DATA_TRANSMISSION_HANDSHAKE
 //
@@ -8170,8 +8004,6 @@ func (m *DataTransmissionHandshake) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.PAYLOAD)
 	binary.Read(data, binary.LittleEndian, &m.JPG_QUALITY)
 }
-
-const ()
 
 //
 // MESSAGE ENCAPSULATED_DATA
@@ -8307,8 +8139,6 @@ func (m *DistanceSensor) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.COVARIANCE)
 }
 
-const ()
-
 //
 // MESSAGE TERRAIN_REQUEST
 //
@@ -8369,8 +8199,6 @@ func (m *TerrainRequest) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.LON)
 	binary.Read(data, binary.LittleEndian, &m.GRID_SPACING)
 }
-
-const ()
 
 //
 // MESSAGE TERRAIN_DATA
@@ -8494,8 +8322,6 @@ func (m *TerrainCheck) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.LON)
 }
 
-const ()
-
 //
 // MESSAGE TERRAIN_REPORT
 //
@@ -8568,8 +8394,6 @@ func (m *TerrainReport) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.PENDING)
 	binary.Read(data, binary.LittleEndian, &m.LOADED)
 }
-
-const ()
 
 //
 // MESSAGE BATTERY_STATUS
@@ -8660,8 +8484,6 @@ func (m *BatteryStatus) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.BATTERY_REMAINING)
 }
 
-const ()
-
 //
 // MESSAGE SETPOINT_8DOF
 //
@@ -8743,8 +8565,6 @@ func (m *Setpoint8Dof) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 }
 
-const ()
-
 //
 // MESSAGE SETPOINT_6DOF
 //
@@ -8817,8 +8637,6 @@ func (m *Setpoint6Dof) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.ROT_Z)
 	binary.Read(data, binary.LittleEndian, &m.TARGET_SYSTEM)
 }
-
-const ()
 
 //
 // MESSAGE MEMORY_VECT
@@ -9189,5 +9007,3 @@ func (m *Debug) Decode(buf []byte) {
 	binary.Read(data, binary.LittleEndian, &m.VALUE)
 	binary.Read(data, binary.LittleEndian, &m.IND)
 }
-
-const ()

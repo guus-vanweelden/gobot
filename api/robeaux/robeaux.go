@@ -1111,71 +1111,71 @@ type _bintree_t struct {
 }
 
 var _bintree = &_bintree_t{nil, map[string]*_bintree_t{
-	"css": &_bintree_t{nil, map[string]*_bintree_t{
-		"fonts.css":     &_bintree_t{css_fonts_css, map[string]*_bintree_t{}},
-		"main.css":      &_bintree_t{css_main_css, map[string]*_bintree_t{}},
-		"normalize.css": &_bintree_t{css_normalize_css, map[string]*_bintree_t{}},
-		"style.css":     &_bintree_t{css_style_css, map[string]*_bintree_t{}},
-		"themes": &_bintree_t{nil, map[string]*_bintree_t{
-			"artoo.css":      &_bintree_t{css_themes_artoo_css, map[string]*_bintree_t{}},
-			"blackboard.css": &_bintree_t{css_themes_blackboard_css, map[string]*_bintree_t{}},
-			"cylon.css":      &_bintree_t{css_themes_cylon_css, map[string]*_bintree_t{}},
-			"dark.css":       &_bintree_t{css_themes_dark_css, map[string]*_bintree_t{}},
-			"gobot.css":      &_bintree_t{css_themes_gobot_css, map[string]*_bintree_t{}},
-			"gray.css":       &_bintree_t{css_themes_gray_css, map[string]*_bintree_t{}},
-			"whiteboard.css": &_bintree_t{css_themes_whiteboard_css, map[string]*_bintree_t{}},
+	"css": {nil, map[string]*_bintree_t{
+		"fonts.css":     {css_fonts_css, map[string]*_bintree_t{}},
+		"main.css":      {css_main_css, map[string]*_bintree_t{}},
+		"normalize.css": {css_normalize_css, map[string]*_bintree_t{}},
+		"style.css":     {css_style_css, map[string]*_bintree_t{}},
+		"themes": {nil, map[string]*_bintree_t{
+			"artoo.css":      {css_themes_artoo_css, map[string]*_bintree_t{}},
+			"blackboard.css": {css_themes_blackboard_css, map[string]*_bintree_t{}},
+			"cylon.css":      {css_themes_cylon_css, map[string]*_bintree_t{}},
+			"dark.css":       {css_themes_dark_css, map[string]*_bintree_t{}},
+			"gobot.css":      {css_themes_gobot_css, map[string]*_bintree_t{}},
+			"gray.css":       {css_themes_gray_css, map[string]*_bintree_t{}},
+			"whiteboard.css": {css_themes_whiteboard_css, map[string]*_bintree_t{}},
 		}},
 	}},
-	"images": &_bintree_t{nil, map[string]*_bintree_t{
-		"bullet-connections-2.png": &_bintree_t{images_bullet_connections_2_png, map[string]*_bintree_t{}},
-		"bullet-connections.png":   &_bintree_t{images_bullet_connections_png, map[string]*_bintree_t{}},
-		"bullet-devices-2.png":     &_bintree_t{images_bullet_devices_2_png, map[string]*_bintree_t{}},
-		"bullet-devices.png":       &_bintree_t{images_bullet_devices_png, map[string]*_bintree_t{}},
-		"delete.png":               &_bintree_t{images_delete_png, map[string]*_bintree_t{}},
-		"devices-image-2.png":      &_bintree_t{images_devices_image_2_png, map[string]*_bintree_t{}},
-		"devices-image.png":        &_bintree_t{images_devices_image_png, map[string]*_bintree_t{}},
-		"logo-robeaux.png":         &_bintree_t{images_logo_robeaux_png, map[string]*_bintree_t{}},
-		"robots-icon_03.png":       &_bintree_t{images_robots_icon_03_png, map[string]*_bintree_t{}},
+	"images": {nil, map[string]*_bintree_t{
+		"bullet-connections-2.png": {images_bullet_connections_2_png, map[string]*_bintree_t{}},
+		"bullet-connections.png":   {images_bullet_connections_png, map[string]*_bintree_t{}},
+		"bullet-devices-2.png":     {images_bullet_devices_2_png, map[string]*_bintree_t{}},
+		"bullet-devices.png":       {images_bullet_devices_png, map[string]*_bintree_t{}},
+		"delete.png":               {images_delete_png, map[string]*_bintree_t{}},
+		"devices-image-2.png":      {images_devices_image_2_png, map[string]*_bintree_t{}},
+		"devices-image.png":        {images_devices_image_png, map[string]*_bintree_t{}},
+		"logo-robeaux.png":         {images_logo_robeaux_png, map[string]*_bintree_t{}},
+		"robots-icon_03.png":       {images_robots_icon_03_png, map[string]*_bintree_t{}},
 	}},
-	"index.html": &_bintree_t{index_html, map[string]*_bintree_t{}},
-	"js": &_bintree_t{nil, map[string]*_bintree_t{
-		"app.js": &_bintree_t{js_app_js, map[string]*_bintree_t{}},
-		"controllers": &_bintree_t{nil, map[string]*_bintree_t{
-			"device_commands_ctrl.js": &_bintree_t{js_controllers_device_commands_ctrl_js, map[string]*_bintree_t{}},
-			"device_events_ctrl.js":   &_bintree_t{js_controllers_device_events_ctrl_js, map[string]*_bintree_t{}},
-			"index_ctrl.js":           &_bintree_t{js_controllers_index_ctrl_js, map[string]*_bintree_t{}},
-			"nav_ctrl.js":             &_bintree_t{js_controllers_nav_ctrl_js, map[string]*_bintree_t{}},
-			"robot_commands_ctrl.js":  &_bintree_t{js_controllers_robot_commands_ctrl_js, map[string]*_bintree_t{}},
-			"robot_ctrl.js":           &_bintree_t{js_controllers_robot_ctrl_js, map[string]*_bintree_t{}},
-			"themes_ctrl.js":          &_bintree_t{js_controllers_themes_ctrl_js, map[string]*_bintree_t{}},
-			"widget_editor_ctrl.js":   &_bintree_t{js_controllers_widget_editor_ctrl_js, map[string]*_bintree_t{}},
-			"widgets_ctrl.js":         &_bintree_t{js_controllers_widgets_ctrl_js, map[string]*_bintree_t{}},
+	"index.html": {index_html, map[string]*_bintree_t{}},
+	"js": {nil, map[string]*_bintree_t{
+		"app.js": {js_app_js, map[string]*_bintree_t{}},
+		"controllers": {nil, map[string]*_bintree_t{
+			"device_commands_ctrl.js": {js_controllers_device_commands_ctrl_js, map[string]*_bintree_t{}},
+			"device_events_ctrl.js":   {js_controllers_device_events_ctrl_js, map[string]*_bintree_t{}},
+			"index_ctrl.js":           {js_controllers_index_ctrl_js, map[string]*_bintree_t{}},
+			"nav_ctrl.js":             {js_controllers_nav_ctrl_js, map[string]*_bintree_t{}},
+			"robot_commands_ctrl.js":  {js_controllers_robot_commands_ctrl_js, map[string]*_bintree_t{}},
+			"robot_ctrl.js":           {js_controllers_robot_ctrl_js, map[string]*_bintree_t{}},
+			"themes_ctrl.js":          {js_controllers_themes_ctrl_js, map[string]*_bintree_t{}},
+			"widget_editor_ctrl.js":   {js_controllers_widget_editor_ctrl_js, map[string]*_bintree_t{}},
+			"widgets_ctrl.js":         {js_controllers_widgets_ctrl_js, map[string]*_bintree_t{}},
 		}},
-		"directives": &_bintree_t{nil, map[string]*_bintree_t{
-			"widget.js": &_bintree_t{js_directives_widget_js, map[string]*_bintree_t{}},
+		"directives": {nil, map[string]*_bintree_t{
+			"widget.js": {js_directives_widget_js, map[string]*_bintree_t{}},
 		}},
-		"router.js": &_bintree_t{js_router_js, map[string]*_bintree_t{}},
-		"services": &_bintree_t{nil, map[string]*_bintree_t{
-			"themes.js":  &_bintree_t{js_services_themes_js, map[string]*_bintree_t{}},
-			"widgets.js": &_bintree_t{js_services_widgets_js, map[string]*_bintree_t{}},
+		"router.js": {js_router_js, map[string]*_bintree_t{}},
+		"services": {nil, map[string]*_bintree_t{
+			"themes.js":  {js_services_themes_js, map[string]*_bintree_t{}},
+			"widgets.js": {js_services_widgets_js, map[string]*_bintree_t{}},
 		}},
-		"vendor": &_bintree_t{nil, map[string]*_bintree_t{
-			"angular-route.min.js": &_bintree_t{js_vendor_angular_route_min_js, map[string]*_bintree_t{}},
-			"angular.min.js":       &_bintree_t{js_vendor_angular_min_js, map[string]*_bintree_t{}},
+		"vendor": {nil, map[string]*_bintree_t{
+			"angular-route.min.js": {js_vendor_angular_route_min_js, map[string]*_bintree_t{}},
+			"angular.min.js":       {js_vendor_angular_min_js, map[string]*_bintree_t{}},
 		}},
-		"widgets": &_bintree_t{nil, map[string]*_bintree_t{
-			"attitude.html": &_bintree_t{js_widgets_attitude_html, map[string]*_bintree_t{}},
-			"attitude.js":   &_bintree_t{js_widgets_attitude_js, map[string]*_bintree_t{}},
-			"mindwave.html": &_bintree_t{js_widgets_mindwave_html, map[string]*_bintree_t{}},
-			"mindwave.js":   &_bintree_t{js_widgets_mindwave_js, map[string]*_bintree_t{}},
+		"widgets": {nil, map[string]*_bintree_t{
+			"attitude.html": {js_widgets_attitude_html, map[string]*_bintree_t{}},
+			"attitude.js":   {js_widgets_attitude_js, map[string]*_bintree_t{}},
+			"mindwave.html": {js_widgets_mindwave_html, map[string]*_bintree_t{}},
+			"mindwave.js":   {js_widgets_mindwave_js, map[string]*_bintree_t{}},
 		}},
 	}},
-	"partials": &_bintree_t{nil, map[string]*_bintree_t{
-		"device.html":        &_bintree_t{partials_device_html, map[string]*_bintree_t{}},
-		"index.html":         &_bintree_t{partials_index_html, map[string]*_bintree_t{}},
-		"robot.html":         &_bintree_t{partials_robot_html, map[string]*_bintree_t{}},
-		"themes.html":        &_bintree_t{partials_themes_html, map[string]*_bintree_t{}},
-		"widget_editor.html": &_bintree_t{partials_widget_editor_html, map[string]*_bintree_t{}},
+	"partials": {nil, map[string]*_bintree_t{
+		"device.html":        {partials_device_html, map[string]*_bintree_t{}},
+		"index.html":         {partials_index_html, map[string]*_bintree_t{}},
+		"robot.html":         {partials_robot_html, map[string]*_bintree_t{}},
+		"themes.html":        {partials_themes_html, map[string]*_bintree_t{}},
+		"widget_editor.html": {partials_widget_editor_html, map[string]*_bintree_t{}},
 	}},
 }}
 
