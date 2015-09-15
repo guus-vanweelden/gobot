@@ -5,24 +5,42 @@ import (
 )
 
 type Gesture struct {
-	Direction     []float64   `json:"direction"`
-	Duration      int         `json:"duration"`
-	Hands         []Hand      `json:"hands"`
-	ID            int         `json:"id"`
-	Pointables    []Pointable `json:"pointables"`
-	Position      []float64   `json:"position"`
-	Speed         float64     `json:"speed"`
-	StartPosition []float64   `json:"StartPosition"`
-	State         string      `json:"state"`
-	Type          string      `json:"type"`
+	// circle only
+	Center []float64 `json:"center"`
+	// swipe, keyTap, screenTap only
+	Direction    []float64 `json:"direction"`
+	Duration     int       `json:"duration"`
+	HandIDs      []int     `json:"handIds"`
+	ID           int       `json:"id"`
+	PointableIDs []int     `json:"pointablesIds"`
+	// swipe, keyTap, screenTap only
+	Position []float64 `json:"position"`
+	// circle, keyTap, screenTap only
+	Progress float64 `json:"progress"`
+	// circle only
+	Radius float64 `json:"radius"`
+	// swipe only
+	Speed float64 `json:"speed"`
+	// swipe only
+	StartPosition []float64 `json:"StartPosition"`
+	// one of "start", "update", "stop"
+	State string `json:"state"`
+	// one of "circle", "swipe", "keyTap", "screenTap"
+	Type string `json:"type"`
 }
 
 type Hand struct {
+	ArmBasis               [][]float64 `json:"armBasis"`
+	ArmWidth               float64     `json:"armWidth"`
+	Confidence             float64     `json:"confidence"`
 	Direction              []float64   `json:"direction"`
+	Elbow                  []float64   `json:"elbow"`
+	GrabStrength           float64     `json:"grabStrength"`
 	ID                     int         `json:"id"`
 	PalmNormal             []float64   `json:"palmNormal"`
 	PalmPosition           []float64   `json:"PalmPosition"`
 	PalmVelocity           []float64   `json:"PalmVelocity"`
+	PinchStrength          float64     `json:"PinchStrength"`
 	R                      [][]float64 `json:"r"`
 	S                      float64     `json:"s"`
 	SphereCenter           []float64   `json:"sphereCenter"`
@@ -30,20 +48,31 @@ type Hand struct {
 	StabilizedPalmPosition []float64   `json:"stabilizedPalmPosition"`
 	T                      []float64   `json:"t"`
 	TimeVisible            float64     `json:"TimeVisible"`
+	Type                   string      `json:"type"`
+	Wrist                  []float64   `json:"wrist"`
 }
 
 type Pointable struct {
-	Direction             []float64 `json:"direction"`
-	HandID                int       `json:"handId"`
-	ID                    int       `json:"id"`
-	Length                float64   `json:"length"`
-	StabilizedTipPosition []float64 `json:"stabilizedTipPosition"`
-	TimeVisible           float64   `json:"timeVisible"`
-	TipPosition           []float64 `json:"tipPosition"`
-	TipVelocity           []float64 `json:"tipVelocity"`
-	Tool                  bool      `json:"tool"`
-	TouchDistance         float64   `json:"touchDistance"`
-	TouchZone             string    `json:"touchZone"`
+	Bases                 [][]float64 `json:"bases"`
+	BTipPosition          []float64   `json:"btipPosition"`
+	CarpPosition          []float64   `json:"carpPosition"`
+	DipPosition           []float64   `json:"dipPosition"`
+	Direction             []float64   `json:"direction"`
+	Extended              bool        `json:"extended"`
+	HandID                int         `json:"handId"`
+	ID                    int         `json:"id"`
+	Length                float64     `json:"length"`
+	MCPPosition           []float64   `json:"mcpPosition"`
+	PIPPosition           []float64   `json:"pipPosition"`
+	StabilizedTipPosition []float64   `json:"stabilizedTipPosition"`
+	TimeVisible           float64     `json:"timeVisible"`
+	TipPosition           []float64   `json:"tipPosition"`
+	TipVelocity           []float64   `json:"tipVelocity"`
+	Tool                  bool        `json:"tool"`
+	TouchDistance         float64     `json:"touchDistance"`
+	TouchZone             string      `json:"touchZone"`
+	Type                  int         `json:"type"`
+	Width                 float64     `json:"width"`
 }
 
 type InteractionBox struct {
@@ -51,9 +80,13 @@ type InteractionBox struct {
 	Size   []float64 `json:"size"`
 }
 
+type Device struct {
+}
+
 // Base representation returned that holds every other objects
 type Frame struct {
 	CurrentFrameRate float64        `json:"currentFrameRate"`
+	Devices          []Device       `json:"devices"`
 	Gestures         []Gesture      `json:"gestures"`
 	Hands            []Hand         `json:"hands"`
 	ID               int            `json:"id"`
