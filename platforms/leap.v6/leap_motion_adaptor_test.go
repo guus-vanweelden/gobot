@@ -19,6 +19,7 @@ func TestLeapMotionAdaptor(t *testing.T) {
 	gobot.Assert(t, a.Name(), "bot")
 	gobot.Assert(t, a.Port(), "127.0.0.1")
 }
+
 func TestLeapMotionAdaptorConnect(t *testing.T) {
 	a := initTestLeapMotionAdaptor()
 	gobot.Assert(t, len(a.Connect()), 0)
