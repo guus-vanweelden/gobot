@@ -16,9 +16,11 @@ var writeError error = nil
 func (NullReadWriteCloser) Write(p []byte) (int, error) {
 	return len(p), writeError
 }
+
 func (NullReadWriteCloser) Read(b []byte) (int, error) {
 	return len(b), nil
 }
+
 func (NullReadWriteCloser) Close() error {
 	return nil
 }
@@ -41,6 +43,7 @@ func TestLeapMotionDriver(t *testing.T) {
 	gobot.Assert(t, d.Name(), "bot")
 	gobot.Assert(t, d.Connection().Name(), "bot")
 }
+
 func TestLeapMotionDriverStart(t *testing.T) {
 	d := initTestLeapMotionDriver()
 	gobot.Assert(t, len(d.Start()), 0)

@@ -22,12 +22,18 @@ func NewLeapMotionAdaptor(name string, port string) *LeapMotionAdaptor {
 		name: name,
 		port: port,
 		connect: func(port string) (io.ReadWriteCloser, error) {
-			return websocket.Dial("ws://"+port+"/v3.json", "", "http://"+port)
+			return websocket.Dial("ws://"+port+"/v6.json", "", "http://"+port)
 		},
 	}
 }
-func (l *LeapMotionAdaptor) Name() string { return l.name }
-func (l *LeapMotionAdaptor) Port() string { return l.port }
+
+func (l *LeapMotionAdaptor) Name() string {
+	return l.name
+}
+
+func (l *LeapMotionAdaptor) Port() string {
+	return l.port
+}
 
 // Connect returns true if connection to leap motion is established succesfully
 func (l *LeapMotionAdaptor) Connect() (errs []error) {
@@ -40,4 +46,6 @@ func (l *LeapMotionAdaptor) Connect() (errs []error) {
 }
 
 // Finalize ends connection to leap motion
-func (l *LeapMotionAdaptor) Finalize() (errs []error) { return }
+func (l *LeapMotionAdaptor) Finalize() (errs []error) {
+	return
+}
